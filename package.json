@@ -1,0 +1,17 @@
+{
+  "name": "reneehauser.github.io",
+  "description": "Renee Hauser's nutrition company site",
+  "version": "0.0.0",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reneehauser/reneehauser.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reneehauser/reneehauser.github.io/issues"
+  },
+  "keywords": [
+    "nutrition",
+    "yoga"
+  ]
+}
