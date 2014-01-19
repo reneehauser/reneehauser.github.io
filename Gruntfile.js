@@ -15,8 +15,11 @@ module.exports = function(grunt) {
     },
 
     shell: {
-      jekyll: {
-        command: 'jekyll serve --watch'
+      jekyllServe: {
+        command: 'jekyll serve'
+      },
+      jekyllBuild: {
+        command: 'jekyll build'
       }
     },
 
@@ -42,7 +45,8 @@ module.exports = function(grunt) {
 
   // Custom tasks
 
-  grunt.registerTask('serve',   ['shell:jekyll']);
+  grunt.registerTask('serve',   ['shell:jekyllServe']);
+  grunt.registerTask('build',   ['sass:dist', 'shell:jekyllBuild']);
   grunt.registerTask('default', ['watch']);
 
 };
