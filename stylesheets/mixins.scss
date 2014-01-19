@@ -23,3 +23,10 @@
 @mixin padding-vert($val) {
   @include vert(padding, $val);
 }
+
+@mixin ornament($pos, $font-size: .9em) {
+  &:#{$pos} {
+    @extend %dingbat-#{$pos}-ornament;
+    font-size: $font-size;
+  }
+}

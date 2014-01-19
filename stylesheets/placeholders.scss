@@ -1,0 +1,21 @@
+$margin-dingbat: .3em;
+
+%dingbat {
+  display: inline-block;
+  position: relative;
+  top: -.1em;
+  font-family: $font-stack-dingbat;
+  color: $color-dingbat;
+}
+
+%dingbat-before-ornament {
+  @extend %dingbat;
+  content: "\f098";
+  margin-right: $margin-dingbat;
+}
+
+%dingbat-after-ornament  {
+  @extend %dingbat;
+  content: "\f099";
+  margin-left: $margin-dingbat;
+}
