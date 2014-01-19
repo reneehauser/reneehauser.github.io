@@ -1,0 +1,25 @@
+@mixin horz($prop, $val) {
+  #{$prop}-left: $val;
+  #{$prop}-right: $val;
+}
+
+@mixin vert($prop, $val) {
+  #{$prop}-top: $val;
+  #{$prop}-bottom: $val;
+}
+
+@mixin margin-horz($val) {
+  @include horz(margin, $val);
+}
+
+@mixin margin-vert($val) {
+  @include vert(margin, $val);
+}
+
+@mixin padding-horz($val) {
+  @include horz(padding, $val);
+}
+
+@mixin padding-vert($val) {
+  @include vert(padding, $val);
+}

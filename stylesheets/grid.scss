@@ -1,0 +1,30 @@
+$grid-num-cols: 12;
+$grid-gutter-width: 20px;
+
+.grid-row {
+  display: block;
+  font-size: 0;
+}
+
+.grid-row-centered {
+  text-align: center;
+}
+
+.grid-col {
+  display: inline-block;
+  font-size: $font-size-base;
+  text-align: left;
+}
+
+// Column sizing
+
+.grid-col-full    { width: 100%; }
+.grid-col-half    { width: 50%; }
+.grid-col-third   { width: 33.333333%; }
+.grid-col-quarter { width: 25%; }
+
+@for $i from 1 through $grid-num-cols {
+  .grid-col-#{$i} {
+    width: ($i / $grid-num-cols) * 100%;
+  }
+}

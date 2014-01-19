@@ -1,0 +1,25 @@
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  font: #{$font-size-base}/#{$line-height-base} $font-stack-text;
+  color: $color-text;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#{$headings} {
+  color: $color-heading;
+  margin: 1.5em 0 .75em;
+}
+
+h1, .giga  { font-size: $font-size-giga; }
+h2, .mega  { font-size: $font-size-mega; }
+h3, .kilo  { font-size: $font-size-kilo; }
+h4, .hecto { font-size: $font-size-hecto; }
+h5, .deca  { font-size: $font-size-deca; }
+h6, .base  { font-size: $font-size-base; }
