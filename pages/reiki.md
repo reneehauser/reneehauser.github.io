@@ -1,4 +1,9 @@
-# Reiki Engery Healing
+---
+title: Reiki
+layout: content-page
+---
+
+# Reiki Energy Healing
 
 Reiki is an ancient Japanese healing technique that harnesses the universal energy within us all. It flows through the practioners hands and onto the receiver. This energy is a powerful source of healing a person physically, mentally, and spiritually.
 
@@ -14,6 +19,6 @@ Reiki is a universal life energy force, and is used for the highest good in both
 
 During the treatment, the receiver will feel a great calmness, relaxation, and often times, fall asleep. Some experience warm sensations where my hands are laid, and other see subtle colors through closed eyes.
 
-## What can I expect after the session? 
+## What can I expect after the session?
 
 After the session, most often the receiver continues throughout his or her day with a feeling of calmness and peace. In certain circumstances, emotions may arise or a physical ailment may seem to worsen, but this is merely a sign that the reiki is working while detoxing the body and mind.
