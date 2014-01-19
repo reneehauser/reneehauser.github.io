@@ -1,7 +1,14 @@
-$grid-num-cols: 12;
-$grid-gutter-width: 20px;
+$grid-num-cols:       12;
+$grid-gutter-width:   20px;
+$grid-max-width:      820px;
+$grid-min-page-width: 768px;
 
-.grid-row {
+.grid-wrapper {
+  max-width: $grid-max-width;
+  margin: 0 auto;
+}
+
+[class*="grid-row"] {
   display: block;
   font-size: 0;
 }
@@ -10,7 +17,7 @@ $grid-gutter-width: 20px;
   text-align: center;
 }
 
-.grid-col {
+[class*="grid-col"] {
   display: inline-block;
   font-size: $font-size-base;
   text-align: left;
@@ -18,13 +25,23 @@ $grid-gutter-width: 20px;
 
 // Column sizing
 
-.grid-col-full    { width: 100%; }
-.grid-col-half    { width: 50%; }
-.grid-col-third   { width: 33.333333%; }
-.grid-col-quarter { width: 25%; }
+@media screen and (min-width: $grid-min-page-width) {
 
-@for $i from 1 through $grid-num-cols {
-  .grid-col-#{$i} {
-    width: ($i / $grid-num-cols) * 100%;
+  .grid-col-full    { width: 100%; }
+  .grid-col-half    { width: 50%; }
+  .grid-col-third   { width: 33.333333%; }
+  .grid-col-quarter { width: 25%; }
+
+  @each $pct in 25, 33.333333, 50, 66.666666, 75 {
+    .grid-col-#{floor($pct)} {
+      width: percentage($pct / 100);
+    }
   }
+
+  @for $i from 1 through $grid-num-cols {
+    .grid-col-#{$i} {
+      width: ($i / $grid-num-cols) * 100%;
+    }
+  }
+
 }
