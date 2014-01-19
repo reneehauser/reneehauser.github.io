@@ -11,9 +11,11 @@
   <div class="grid-col-66">
     <nav class="nav">
       <ul class="list-inline">
-        <li><a href="#">Yoga</a></li>
-        <li><a href="#">Reiki</a></li>
-        <li><a href="#">About</a></li>
+        {% for page in site.pages %}
+          {% if page.layout == 'content-page' %}
+            <li><a href="{{page.url}}">{{page.title}}</a></li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </nav>
   </div>
