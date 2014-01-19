@@ -37,16 +37,21 @@ $grid-min-page-width: 768px;
   .grid-col-third   { width: 33.333333%; }
   .grid-col-quarter { width: 25%; }
 
-  @each $pct in 25, 33.333333, 50, 66.666666, 75 {
-    .grid-col-#{floor($pct)} {
-      width: percentage($pct / 100);
-    }
+  @each $val in 25, 33.333333, 50, 66.666666, 75 {
+    $int: floor($val);
+    $pct: percentage($val / 100);
+
+    .grid-col-#{$int} { width: $pct; }
+
+    .grid-col-offset-#{$int} { margin-left:  $pct; }
   }
 
   @for $i from 1 through $grid-num-cols {
-    .grid-col-#{$i} {
-      width: ($i / $grid-num-cols) * 100%;
-    }
+    $pct: ($i / $grid-num-cols) * 100%;
+
+    .grid-col-#{$i} { width: $pct; }
+
+    .grid-col-offset-#{$i} { margin-left: $pct; }
   }
 
 }
