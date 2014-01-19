@@ -5,8 +5,11 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
+      options: {
+        compass: true
+      },
       dist: {
-        src: 'stylesheets/*.scss',
+        src: 'stylesheets/main.scss',
         dest: 'css/main.css'
       }
     },
