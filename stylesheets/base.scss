@@ -15,9 +15,13 @@ header, hgroup, menu, nav, section {
   display: block;
 }
 
+html, body {
+  height: 100%;
+}
+
 html {
   @include background(
-    radial-gradient(circle, $color-bg-inner, $color-bg-outer),
+    radial-gradient(circle at 50% 10%, $color-bg-inner 0%, $color-bg-outer 100%),
     $color-bg-outer
   );
   font: #{$font-size-base}/#{$line-height-base} $font-stack-text;
