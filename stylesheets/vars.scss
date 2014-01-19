@@ -2,6 +2,7 @@
 
 $font-stack-text:      "Georgia", "Times New Roman", "Times", serif;
 $font-stack-heading:   $font-stack-text;
+$font-stack-dingbat:   "Wingdings";
 
 $font-size-giga:       48px;
 $font-size-mega:       36px;
@@ -15,15 +16,26 @@ $line-height-base:     1.8;
 
 // Colors
 
-$color-text:           #7d6e67;
-$color-heading:        #65517b;
+$brown:                #7d6e67;
+$purple:               #65517b;
+$light-purple:         desaturate(lighten($purple, 20%), 5%);
+$very-light-purple:    lighten($light-purple, 20%);
+$deep-purple:          darken(saturate($purple, 8%), 3%);
+$off-white:            #fff4e0;
+$off-white-2:          lighten($off-white, 5%);
 
-$color-link:           saturate($color-heading, 10%);
-$color-link-visited:   lighten(desaturate($color-link, 8%), 15%);
-$color-link-hover:     darken(saturate($color-link, 8%), 3%);
+$color-text:           $brown;
+$color-heading:        $purple;
 
-$color-bg-outer:       #fff4e0;
-$color-bg-inner:       lighten($color-bg-outer, 5%);
+$color-link:           $purple;
+$color-link-visited:   $light-purple;
+$color-link-hover:     $deep-purple;
+
+$color-bg-outer:       $off-white;
+$color-bg-inner:       $off-white-2;
+
+$color-rule:           $very-light-purple;
+$color-dingbat:        $very-light-purple;
 
 
 // Other
