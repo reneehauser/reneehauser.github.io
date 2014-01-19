@@ -3,6 +3,10 @@
 }
 
 html {
+  @include background(
+    radial-gradient(circle, $color-bg-inner, $color-bg-outer),
+    $color-bg-outer
+  );
   font: #{$font-size-base}/#{$line-height-base} $font-stack-text;
   color: $color-text;
 }
