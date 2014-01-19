@@ -6,6 +6,7 @@ $grid-min-page-width: 768px;
 .grid-wrapper {
   max-width: $grid-max-width;
   margin: 0 auto;
+  padding: 0 .5em;
 }
 
 [class*="grid-row"] {
@@ -21,11 +22,15 @@ $grid-min-page-width: 768px;
   display: inline-block;
   font-size: $font-size-base;
   text-align: left;
+  padding: 0 $grid-gutter-width / 2;
 }
 
-// Column sizing
 
 @media screen and (min-width: $grid-min-page-width) {
+
+  .grid-wrapper { @include padding-horz(1.5em); }
+
+  // Column sizing
 
   .grid-col-full    { width: 100%; }
   .grid-col-half    { width: 50%; }
