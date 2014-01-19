@@ -2,6 +2,19 @@
   @include box-sizing(border-box);
 }
 
+html, body,
+ul, ol, li, dl, dt, dd,
+p, #{$headings} {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details,
+figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
 html {
   @include background(
     radial-gradient(circle, $color-bg-inner, $color-bg-outer),
@@ -11,10 +24,8 @@ html {
   color: $color-text;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
+
+// Headings
 
 #{$headings} {
   color: $color-heading;
@@ -27,3 +38,22 @@ h3, .kilo  { font-size: $font-size-kilo; }
 h4, .hecto { font-size: $font-size-hecto; }
 h5, .deca  { font-size: $font-size-deca; }
 h6, .base  { font-size: $font-size-base; }
+
+
+// Lists
+
+.list-inline {
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+.list-unstyled {
+  li { list-style: none; }
+}
+
+.nav ul,
+.nav ol {
+  @extend .list-unstyled;
+}
