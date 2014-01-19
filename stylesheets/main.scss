@@ -1,8 +1,21 @@
+// Vendor
+
 @import "compass";
+
+
+// Helpers
 
 @import "vars";
 @import "mixins";
 
+
+// Components
+
 @import "base";
 @import "utils";
 @import "grid";
+
+
+// Sections
+
+@import "masthead";
