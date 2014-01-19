@@ -24,12 +24,16 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true
+      },
       stylesheets: {
-        files: '<%= sass.dist.src %>',
-        tasks: ['sass:dist'],
-        options: {
-          livereload: true
-        }
+        files: ['stylesheets/*.scss'],
+        tasks: ['build'],
+      },
+      templates: {
+        files: ['_includes/*.html', '_layouts/*.html'],
+        tasks: ['build']
       }
     }
 
