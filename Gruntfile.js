@@ -34,6 +34,10 @@ module.exports = function(grunt) {
       templates: {
         files: ['_includes/*.html', '_layouts/*.html'],
         tasks: ['build']
+      },
+      content: {
+        files: ['pages/*', '_posts/*'],
+        tasks: ['build']
       }
     }
 
