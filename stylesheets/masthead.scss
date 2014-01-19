@@ -1,10 +1,18 @@
 .masthead {
+  margin: $vertical-rhythm 0;
+  padding-bottom: $vertical-rhythm;
+  border-bottom: $rule;
 
   .nav {
     text-align: right;
 
     li {
-      margin-left: 1em;
+      margin-left: 1.3em;
+    }
+
+    a {
+      @include ornament(before);
+      @include ornament(after);
     }
   }
 
