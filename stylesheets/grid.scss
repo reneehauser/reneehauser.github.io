@@ -9,24 +9,25 @@ $grid-min-page-width: 768px;
   padding: 0 .5em;
 }
 
-[class*="grid-row"] {
-  display: block;
-  font-size: 0;
-}
-
-.grid-row-centered {
-  text-align: center;
-}
-
-[class*="grid-col"] {
-  display: inline-block;
-  font-size: $font-size-base;
-  text-align: left;
-  padding: 0 $grid-gutter-width / 2;
-}
 
 
 @media screen and (min-width: $grid-min-page-width) {
+
+  [class*="grid-row"] {
+    display: block;
+    font-size: 0;
+  }
+
+  .grid-row-centered {
+    text-align: center;
+  }
+
+  [class*="grid-col"] {
+    display: inline-block;
+    font-size: $font-size-base;
+    text-align: left;
+    padding: 0 $grid-gutter-width / 2;
+  }
 
   .grid-wrapper { @include padding-horz(1.5em); }
 
