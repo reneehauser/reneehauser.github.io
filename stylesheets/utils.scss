@@ -1,12 +1,11 @@
-.hide {
-  display: none !important;
-}
+.hide          { display: none !important; }
 
-.invisible {
-  visibility: hidden !important;
-}
+.invisible     { visibility: hidden !important; }
 
-.accessibility {
-  position: absolute;
-  left: -9999px;
-}
+.accessibility { position: absolute; left: -9999px; }
+
+.align-center  { text-align: center !important; }
+
+.align-left    { text-align: left !important; }
+
+.align-right   { text-align: right !important; }
