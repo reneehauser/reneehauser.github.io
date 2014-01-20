@@ -28,6 +28,10 @@ html {
   color: $color-text;
 }
 
+img, video {
+  max-width: 100%;
+}
+
 
 // Headings
 
