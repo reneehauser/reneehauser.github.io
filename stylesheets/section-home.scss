@@ -1,0 +1,19 @@
+.grid-row-hero {
+
+  img {
+    display: block;
+    width: 100%;
+    max-height: 200px; // temporary
+  }
+
+}
+
+.grid-row-home-intros {
+
+  #{$headings} {
+    @include ornament(before);
+    @include ornament(after);
+    font-size: $font-size-kilo;
+  }
+
+}

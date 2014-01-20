@@ -3,4 +3,25 @@ layout: default
 title: Renee's site
 ---
 
-<p>No content yet</p>
+<div class="grid-row grid-row-hero">
+
+  <section class="grid-col-full">
+    {% capture hero %}{% include home/hero.md %}{% endcapture %}
+    {{ hero | markdownify }}
+  </section>
+
+</div>
+
+<div class="grid-row grid-row-home-intros">
+
+  <section class="grid-col-half align-center">
+    {% capture left %}{% include home/left-section.md %}{% endcapture %}
+    {{ left | markdownify }}
+  </section>
+
+  <section class="grid-col-half align-center">
+    {% capture right %}{% include home/right-section.md %}{% endcapture %}
+    {{ right | markdownify }}
+  </section>
+
+</div>
