@@ -15,6 +15,10 @@ module.exports = function(grunt) {
     },
 
     shell: {
+      options: {
+        stderr: true,
+        stdout: true
+      },
       jekyllServe: {
         command: 'jekyll serve'
       },
@@ -32,11 +36,11 @@ module.exports = function(grunt) {
         tasks: ['build'],
       },
       templates: {
-        files: ['_includes/*.html', '_layouts/*.html'],
+        files: ['_includes/**/*.html'],
         tasks: ['build']
       },
       content: {
-        files: ['pages/*', '_posts/*'],
+        files: ['_includes/**/*.md', 'pages/*.md'],
         tasks: ['build']
       }
     }
